@@ -47,8 +47,6 @@ export const useConnection = () => {
   const context = useWeb3Context();
 
   const connect = async (connector: Connector) => {
-    context.setConnecting(true);
-
     connector.setConnectionChangedCallback((connected) =>
       context.setConnected(connected)
     );
@@ -77,6 +75,8 @@ export const useConnection = () => {
 
   const disconnect = () => {
     context.connector.disconnect();
+    context.setNetwork(null);
+    context.setAccountAddress(null);
     context.setConnector(
       new NetworkConnector(context.networksConfig.supportedNetworks)
     );

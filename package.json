@@ -1,7 +1,7 @@
 {
   "name": "@web3-sdk/react",
   "version": "0.0.1",
-  "description": "> **Notice: The current documentation is a draft version describing an API that has yet to be developed as part of the upcoming Web3 SDK.**",
+  "description": "The goal of this package is to simplify frequent and complex challenges in Web3 development, like wallet connections, smart contract integrations, and transaction management.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -50,8 +50,8 @@
     "ethers": "^5.6.2",
     "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-query": "^3.34.19",
     "rollup": "^2.30.0",
     "rollup-plugin-sass": "^1.2.2",
