@@ -3,6 +3,8 @@
 To get started:
 
 ```
-$ yarn
-$ yarn dev
+$ cd ../
+$ yarn && yarn build
+$ cd ./example
+$ yarn && yarn dev
 ```
