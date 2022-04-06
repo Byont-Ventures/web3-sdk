@@ -1,6 +1,6 @@
 {
   "name": "@web3-sdk/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The goal of this package is to simplify frequent and complex challenges in Web3 development, like wallet connections, smart contract integrations, and transaction management.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
