@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/@web3-sdk%2Freact.svg)](https://badge.fury.io/js/@web3-sdk%2Freact)
 
-> **This package is in early alpha, don't use in production!**
+> **This package is in early alpha, don't use it in production!**
 
 Web3-SDK will be a flexible kit for developing DApps, smart contracts, and related services like The Graph. The goal is to simplify frequent and complex challenges in Web3 development, like wallet connections, smart contract integrations, and transaction management.
 
