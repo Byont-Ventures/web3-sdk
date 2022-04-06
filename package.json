@@ -1,5 +1,5 @@
 {
-  "name": "web3-sdk",
+  "name": "@web3-sdk/react",
   "version": "1.0.0",
   "description": "> **Notice: The current documentation is a draft version describing an API that has yet to be developed as part of the upcoming Web3 SDK.**",
   "main": "dist/index.js",
