@@ -1,10 +1,14 @@
 # @web3-sdk/react
 
+[![npm version](https://badge.fury.io/js/@web3-sdk%2Freact.svg)](https://badge.fury.io/js/@web3-sdk%2Freact)
+
+> **This package is in early alpha, don't use in production!**
+
 Web3-SDK will be a flexible kit for developing DApps, smart contracts, and related services like The Graph. The goal is to simplify frequent and complex challenges in Web3 development, like wallet connections, smart contract integrations, and transaction management.
 
-If you're looking to get started right away read the documentation below:
+Currently, this package contains the result of an internal rapid development cycle and does not match the API described below. There won't be any documentation, but a quick example is included in the `/example` folder. If you're looking to try this package, feel free to check it out.
 
-  * [alpha-0.0.1](#alpha-001)
+* [Running the example app](/example/README.md)
 ## Reference Design
 
 > **Notice: The documentation below is a draft version describing an API that has yet to be developed as part of the upcoming Web3 SDK.**
@@ -316,7 +320,3 @@ We might also expose other abstractions like:
   * `etherValue(1, tokenAddress)`
 - Merkle Proof generating and validating
 - If required, we might re-expose certain Ethers methods
-
-## alpha-0.0.1
-
-// TODO
