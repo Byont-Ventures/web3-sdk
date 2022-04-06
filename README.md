@@ -1,6 +1,13 @@
-> **Notice: The current documentation is a draft version describing an API that has yet to be developed as part of the upcoming Web3 SDK.**
-
 # @web3-sdk/react
+
+Web3-SDK will be a flexible kit for developing DApps, smart contracts, and related services like The Graph. The goal is to simplify frequent and complex challenges in Web3 development, like wallet connections, smart contract integrations, and transaction management.
+
+If you're looking to get started right away read the documentation below:
+
+  * [alpha-0.0.1](#alpha-001)
+## Reference Design
+
+> **Notice: The documentation below is a draft version describing an API that has yet to be developed as part of the upcoming Web3 SDK.**
 
 @web3-sdk/react will provide an easy to use toolset used to simplify Web3 development. Currently, we propose to implement abstractions around the following:
 
@@ -9,7 +16,7 @@
 - [Transactions](#transaction-management)
 - [Events](#event-management)
 
-## Setting Up
+### Setting Up
 
 The library exposes a stateful [React Context API](https://reactjs.org/docs/context.html) provider that provides a global state for the built-in hooks. The user must implement this for the hooks to work.
 
@@ -50,9 +57,9 @@ const supportedChains = [
 </Web3Provider>
 ```
 
-## Connection Management
+### Connection Management
 
-### Connectors
+#### Connectors
 The library doesn't supply any UI components for wallet connections. Instead, the user should implement a modal (or similar) with the different connectors that they want to support.
 
 ```tsx
@@ -85,7 +92,7 @@ return (
 
 Alternatives could be: `useNetworkConnector`, `useMetamaskConnector`, `useWalletConnectConnector`, `useMagicLinkConnector`, etc.
 
-### Connection Hooks
+#### Connection Hooks
 As opposed to alternatives, this library makes a clear distinction between the backend connection of a connected wallet and the connection of the web app.
 
 The reason for this is that the web app can't fully control the connector settings, i.e., situations where the wallet does not:
@@ -147,9 +154,9 @@ const networkProvider = useNetworkProvider();
 const walletProvider = useWalletProvider();
 ```
 
-## Contract Management
+### Contract Management
 
-### Contract Hooks
+#### Contract Hooks
 
 Querying and mutating blockchain data is a common challenge in blockchain development. Luckily, [TypeChain](https://github.com/dethcrypto/TypeChain) allows us to create typed smart contracts which we can wrap in custom hooks.
 
@@ -163,7 +170,7 @@ const { mint, name, symbol } = useERC721Contract(address);
 ```
 Alternatives could be: `useERC721AContract`, `useERC1155Contract`, etc.
 
-### Contract Method Hooks
+#### Contract Method Hooks
 The library makes it easy to query and mutate contract methods anywhere in the app using [react-query](https://github.com/tannerlinsley/react-query), which caches, error handles, dedupes, and invalidates async requests. That allows the developer to use contract method hooks anywhere in the application, and the request will only execute once unless invalidated.
 
 The most verbose way of querying data from the blockchain is:
@@ -220,7 +227,7 @@ const transaction = transferMutation.mutate(
 );
 ```
 
-## Transaction Management
+### Transaction Management
 Handling long-running transactions can be done in two ways:
 
 - using the `isLoading` property of the mutation
@@ -264,7 +271,7 @@ return transactions.map((transaction, i) => (
 
 The example above is different from transactions made by the user, which can be obtained by: `useWalletProvider().getHistory()`.
 
-## Event Management
+### Event Management
 
 Events are exposed from the query filter API from Ethers, supplemented with `react-query` for global access. Again, because we've implemented the contract layer, these are fully typed.
 
@@ -298,7 +305,7 @@ return events
   ));
 ```
 
-## Misc
+### Misc
 
 > This list we're not sure about yet.
 
@@ -309,3 +316,7 @@ We might also expose other abstractions like:
   * `etherValue(1, tokenAddress)`
 - Merkle Proof generating and validating
 - If required, we might re-expose certain Ethers methods
+
+## alpha-0.0.1
+
+// TODO
