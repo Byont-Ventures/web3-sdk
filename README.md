@@ -4,7 +4,7 @@
 
 > **This package is in early alpha, don't use it in production!**
 
-Web3-SDK will be a flexible kit for developing DApps, smart contracts, and related services like The Graph. The goal is to simplify frequent and complex challenges in Web3 development, like wallet connections, smart contract integrations, and transaction management.
+Web3-SDK’s aim is to lower the entry barriers for new developers and increase the effectiveness of experienced developers by tackling frequent and complex challenges, like wallet connections, smart contract integrations, and transaction management.
 
 Currently, this package contains the result of an internal rapid development cycle and does not match the API described below. There won't be any documentation, but a quick example is included in the `/example` folder. If you're looking to try this package, feel free to check it out.
 
